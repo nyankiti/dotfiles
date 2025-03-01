@@ -21,9 +21,9 @@ brew "kube-ps1"
 brew "dive" # Docker image explorer
 
 # cask
-# cask 'google-chrome'
-# cask 'google-japanese-ime'
-# cask 'iterm2'
-# cask "cursor"
-# cask "raycast"
-# cask "visual-studio-code"
+cask 'google-chrome'
+cask 'google-japanese-ime'
+cask 'iterm2'
+cask "cursor"
+cask "raycast"
+cask "visual-studio-code"

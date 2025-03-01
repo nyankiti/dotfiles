@@ -72,7 +72,6 @@ fi
 
 echo "セットアップが完了しました"
 echo "Next..."
-echo "1. .envを追加し、環境変数を設定してください。"
-echo "2. git/user.confを追加し、ユーザー情報を設定してください。"
-echo "3. ターミナルを再起動してください。"
-echo "4. Raycastの設定をimportしてください。"
+echo "1. git/user.confを追加し、ユーザー情報を設定してください。"
+echo "2. ターミナルを再起動してください。"
+echo "3. Raycastの設定をimportしてください。"
