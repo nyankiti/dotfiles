@@ -1,0 +1,18 @@
+[include]
+  path = ~/dotfiles/git/user.conf
+[color]
+	ui = true
+[core]
+	autocrlf = false
+	ignorecase = false
+	quotepath = false
+	safecrlf = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[push]
+	default = current
+    autoSetupRemote = true
+[merge]
+  ff = false
