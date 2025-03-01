@@ -13,5 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Dotfiles
-        run: setup.sh
+      - name: Setup.sh
+        run: bash install.sh
+        shell: zsh {0}
+        env:
+          SHELL: /usr/bin/zsh
+      - name: Source .zshrc
+        run: source zsh/.zshrc
+        shell: zsh {0}
+        env:
+          SHELL: /usr/bin/zsh
