@@ -21,8 +21,17 @@ if [ "$(which brew)" == "" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-
 # Set vscode path
 if [ "$(which code)" == "" ]; then
   export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 fi
+
+# Set mise path
+if [ "$(which mise)" != "" ]; then
+  eval "$(mise activate bash)"
+fi
+
+# Change git path to brew git
+GIT_PATH=$(brew --prefix)/bin/git
+export PATH="$GIT_PATH:$PATH"
+
