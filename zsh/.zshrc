@@ -45,9 +45,6 @@ setopt nolistbeep
 # dir stack
 setopt AUTO_PUSHD
 
-# fpath
-fpath+=~/.zfunc
-
 # sheldon 読み込み
 export SHELDON_CONFIG_FILE=$HOME/.sheldon.toml
 eval "$(sheldon source)"
@@ -56,3 +53,13 @@ eval "$(sheldon source)"
 if [[ -z $TMUX && $- == *l* && -n $SSH_TTY &&  ! $TERM_PROGRAM == vscode ]]; then
     type tmux > /dev/null 2>&1 && tmux attach || tmux
 fi
+
+
+# load pure
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+prompt pure
+
+# prompt with kube context
+source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
+PROMPT='$(kube_ps1)'$'\n'$PROMPT

@@ -15,23 +15,24 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-# Set brew path
-if [ "$(which brew)" == "" ]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -d "/usr/local/bin" ] ; then
+    PATH="/usr/local/bin:$PATH"
 fi
 
+# Set brew path
+if [ -z "$(command -v brew)" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+# prioritize brew path (brew 管理の git などを優先させるため)
+export PATH="/opt/homebrew/bin/:$PATH"
+
 # Set vscode path
-if [ "$(which code)" == "" ]; then
+if [ -z "$(command -v code)" ]; then
   export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 fi
 
 # Set mise path
-if [ "$(which mise)" != "" ]; then
-  eval "$(mise activate bash)"
+if [ -n "$(command -v mise)" ]; then
+  eval "$(mise activate zsh)"
 fi
-
-# Change git path to brew git
-GIT_PATH=$(brew --prefix)/bin/git
-export PATH="$GIT_PATH:$PATH"
-
+export PATH="$HOME/.local/share/mise/shims:$PATH"
