@@ -1,16 +1,5 @@
 shell = "zsh"
 
-# デフォルトを遅延読み込みにする
-apply = ["defer"]
-
-[plugins.zsh-defer]
-github = "romkatv/zsh-defer"
-apply = ["source"]
-
-# 遅延読み込みの設定 
-[templates]
-defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
-
 # pure テーマ
 [plugins.pure]
 github = "sindresorhus/pure"
