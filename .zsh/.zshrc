@@ -4,9 +4,6 @@
 # load .functions
 [ -f $HOME/.zsh/.functions ] && source $HOME/.zsh/.functions
 
-# load .zshrc.local
-[ -f $HOME/.zsh/.zshrc.local ] && source $HOME/.zsh/.zshrc.local
-
 # history
 export HISTSIZE=1000
 export SAVEHIST=1000000
