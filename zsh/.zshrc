@@ -1,8 +1,8 @@
 # load .aliases
-[ -f $HOME/.zsh/.aliases ] && source $HOME/.zsh/.aliases
+[ -f $HOME/.aliases ] && source $HOME/.aliases
 
 # load .functions
-[ -f $HOME/.zsh/.functions ] && source $HOME/.zsh/.functions
+[ -f $HOME/.functions ] && source $HOME/.functions
 
 # history
 export HISTSIZE=1000

@@ -17,5 +17,4 @@
 
 ## TODO
 - Mac[本体の設定](https://support.apple.com/ja-jp/guide/terminal/apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac#:~:text=defaults%20%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AFmacOS%E3%81%AE,%E8%A8%AD%E5%AE%9A%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82)(defaultコマンドによる設定)の追加
-- fzfの検索履歴以外の機能調査
 - vscodeのextension周りの設定の追加
