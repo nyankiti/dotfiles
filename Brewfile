@@ -11,6 +11,8 @@ brew "yq"
 brew "mise"
 brew "sheldon"
 brew "pure"
+brew "ghq"
+brew "tree"
 # kube関連
 brew "krew"
 brew "kubectx"

@@ -11,6 +11,7 @@
 - [Macの環境をdotfilesでセットアップしてみた改](https://github.com/tsukuboshi/dotfiles)
 - [ようこそdotfilesの世界へ](https://qiita.com/yutkat/items/c6c7584d9795799ee164)
 - [Mac の環境を dotfiles でセットアップしてみた(2023 年度版)](https://zenn.dev/tsukuboshi/articles/6e82aef942d9af)
+- [モテるGit管理 (gh, ghq, git-cz, lazygit)](https://zenn.dev/mozumasu/articles/mozumasu-lazy-git)
 - https://github.com/tsukuboshi/dotfiles/tree/26c2fd1a315a34bf38fdab9ed0dce8b0d52ddf32
 -  GitHub topicのdotfiles https://github.com/topics/dotfiles
 

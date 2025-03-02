@@ -16,3 +16,6 @@
     autoSetupRemote = true
 [merge]
   ff = false
+
+[ghq]
+    root = ~/src

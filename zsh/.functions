@@ -11,3 +11,15 @@ function history_search_with_fzf() {
 }
 zle -N history_search_with_fzf
 bindkey '^R' history_search_with_fzf
+
+
+function ghq-fzf() {
+  local src=$(ghq list -p | fzf --preview "ls -laTp {} | tail -n+4 | awk '{print \$9\"/\"\$6\"/\"\$7 \" \" \$10}'")
+  if [ -n "$src" ]; then
+    BUFFER="cd $src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N ghq-fzf
+bindkey '^]' ghq-fzf
