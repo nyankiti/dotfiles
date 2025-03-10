@@ -15,7 +15,7 @@ else
 fi
 
 # Brewfileに記載されたパッケージをインストール
-brew bundle install --file=Brewfile
+/opt/homebrew/bin/brew bundle install --file=Brewfile
 
 # xcode のインストール
 if ! xcode-select -p &>/dev/null; then
@@ -61,12 +61,12 @@ fi
 
 # miseのNode環境をグローバル化
 if ! which node; then
-    $(brew --prefix)/bin/mise use --global node
+    $(/opt/homebrew/bin/brew --prefix)/bin/mise use --global node
 fi
 
 # miseのPython環境をグローバル化
 if ! which python; then
-    $(brew --prefix)/bin/mise use --global python
+    $(/opt/homebrew/bin/brew --prefix)/bin/mise use --global python
 fi
 
 
