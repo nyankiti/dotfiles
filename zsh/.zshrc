@@ -5,7 +5,7 @@
 [ -f $HOME/.functions ] && source $HOME/.functions
 
 # history
-export HISTSIZE=1000
+export HISTSIZE=20000
 export SAVEHIST=1000000
 export HISTFILE=$HOME/.zsh_history
 setopt hist_ignore_dups
@@ -63,3 +63,6 @@ prompt pure
 # prompt with kube context
 source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
 PROMPT='$(kube_ps1)'$'\n'$PROMPT
+
+# idea
+export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
