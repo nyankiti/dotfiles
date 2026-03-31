@@ -5,7 +5,7 @@
 [ -f $HOME/.functions ] && source $HOME/.functions
 
 # history
-export HISTSIZE=20000
+export HISTSIZE=200000
 export SAVEHIST=1000000
 export HISTFILE=$HOME/.zsh_history
 setopt hist_ignore_dups
@@ -66,3 +66,17 @@ PROMPT='$(kube_ps1)'$'\n'$PROMPT
 
 # idea
 export PATH="$PATH:/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
+
+# git user
+function gitmain() {
+  git config --global user.name "nyankiti"
+  git config --global user.email "nowi41cic77mav@gmail.com"
+}
+
+function giterax() {
+  git config --global user.name "ksouda-code"
+  git config --global user.email "k.souda@eraxai.info"
+}
+
+
+
