@@ -17,6 +17,9 @@ fi
 # Brewfileに記載されたパッケージをインストール
 /opt/homebrew/bin/brew bundle install --file=Brewfile
 
+# homebrew-autoupdate の設定（12時間ごとに指定パッケージを自動upgrade）
+/opt/homebrew/bin/brew autoupdate start 43200 --upgrade --only=claude-code
+
 # xcode のインストール
 if ! xcode-select -p &>/dev/null; then
     echo "Xcode Command Line Tools が見つかりません。インストールを開始します..."
